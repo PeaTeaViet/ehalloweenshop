@@ -1,0 +1,210 @@
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --hue: 14;
+--first-color: hsl(var(--hue), 91%, 54%);
+--first-color-alt: hsl(var(--hue), 91%, 50%);
+--title-color: hsl(var(--hue), 4%, 100%);
+--text-color: hsl(var(--hue), 4%, 85%);
+--text-color-light: hsl(var(--hue), 4%, 55%);
+
+/*Violet gradient*/
+--body-color: linear-gradient(90deg, hsl(236, 84%, 27%) 0%, hsl(303, 85%, 32%) 100%);
+--container-color: linear-gradient(136deg, hsl(258, 37%, 41%) 0%, hsl(323, 42%, 41%) 100%);
+
+/*Red gradient*/
+/* --body-color: linear-gradient(90deg, hsl(360, 28%, 40%) 0%, hsl(18, 28%, 40%) 100%);
+--container-color: linear-gradient(136deg, hsl(360, 28%, 35%) 0%, hsl(18, 28%, 35%) 100%); */
+
+/*Black solid*/
+/*  --body-color: hsl(30, 8%, 8%);
+    --container-color: hsl(30, 8%, 10%); */
+
+/*========== Font and typography ==========*/
+--body-font: 'Poppins', sans-serif;
+--biggest-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+
+/*========== Font weight ==========*/
+--font-medium: 500;
+--font-semi-bold: 600;
+--font-black: 900;
+
+/*========== Margenes Bottom ==========*/
+--mb-0-25: .25rem;
+--mb-0-5: .5rem;
+--mb-0-75: .75rem;
+--mb-1: 1rem;
+--mb-1-5: 1.5rem;
+--mb-2: 2rem;
+--mb-2-5: 2.5rem;
+
+/*========== z index ==========*/
+--z-tooltip: 10;
+--z-fixed: 100;
+--z-modal: 1000;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--body-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+
+.signup {
+  padding: 50px 50px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 25px;
+}
+.signup-heading {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #373941;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.signup-social {
+  padding: 5px;
+  border-radius: 15px;
+  width: 100%;
+  color: white;
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  background-color: #4c6ff4;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 5px 10px 0 rgba(76, 111, 244, 0.5);
+}
+.signup-social-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  color: #4c6ff4;
+}
+.signup-social-text {
+  display: block;
+  margin: 0 auto;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+}
+.signup-or {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  color: #999;
+  margin: 15px auto;
+  position: relative;
+}
+.signup-or span {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.signup-or:after {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background-color: #999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.signup-label {
+  font-size: var(--h2-font-size);
+  color: #63676b;
+  font-weight: var(--font-medium);
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.signup-input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  background-color: #f2f3f5;
+  outline: none;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--h2-font-size);
+  margin-bottom: 20px;
+}
+.signup-input::-webkit-input-placeholder {
+  color: #b4bac0;
+  font-weight: var(--font-medium);
+}
+.signup-input::-moz-input-placeholder {
+  color: #b4bac0;
+  font-weight: var(--font-medium);
+}
+.signup-submit {
+  padding: 15px;
+  color: white;
+  font-size: var(--h2-font-size);
+  text-align: center;
+  border: 0;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  border-radius: 14px;
+  background-color: rgb(130, 201, 30);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  font-weight: var(--font-semi-bold);
+  box-shadow: 0 5px 10px 0 rgba(130, 201, 30, 0.5);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.signup-already {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  color: #999;
+}
+.signup-login-link {
+  color: #2979ff;
+  text-decoration: none;
+}
+
+.signup-img1{
+  position: absolute;
+  width: 200px;
+  right: 15rem;
+}
+.signup-img2{
+  position: absolute;
+  width: 250px;
+  left: 10rem;
+}
